@@ -381,6 +381,8 @@ static void http_client_store_chunked(struct http_client *hc, FILE *out)
 
 		http_client_store_simple(hc, length, out);
 	}
+	
+	free(line);
 }
 
 static void http_client_store(struct http_client *hc)
